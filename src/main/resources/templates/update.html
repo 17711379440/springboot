@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>修改</title>
+    </head>
+    <body>
+        <form th:action="@{/update}" th:object="${user}" method="post">
+            <input type="hidden" name="id" th:value="*{id}">
+            用户名：<input type="text" name="username" th:value="*{username}"><br>
+            &emsp;密码：<input type="password" name="password" th:value="*{password}"><br>
+            &emsp;年龄：<input type="text" name="age" th:value="${user.age}"><br>
+            <button type="submit">修改</button>
+            <button type="reset">重置</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>添加</title>
+    </head>
+    <body>
+        <form th:action="@{/add}" method="post">
+            用户名：<input type="text" name="username"><br>
+            &emsp;密码：<input type="password" name="password"><br>
+            &emsp;年龄：<input type="text" name="age"><br>
+            <button type="submit">添加</button>
+            <button type="reset">重置</button>
+        </form>
+    </body>
+</html>
